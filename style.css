@@ -1,0 +1,218 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bbc4cfb5;
+    color: #343a40;
+    padding-top: 4rem;
+    max-width: 100%;
+}
+
+a {
+    color: #343a40;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #212529;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #f8d210;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    padding: 3px;
+}
+
+.main-content {
+    padding: 2rem;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.main-content .text-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.pricing-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    background: url("https://img.freepik.com/free-vector/gradient-black-background-with-cubes_23-2149177092.jpg") no-repeat center center;
+    padding: 3rem;
+    background-size: 750px auto;
+    align-content: center;
+    margin-bottom: 10px;
+}
+
+.pricing-section .image-content img {
+    max-width: 100%;
+    transition: transform 0.3s ease;
+    left: 20%;
+   
+    
+}
+
+.pricing-section .image-content img:hover {
+    transform: scale(1.05);
+}
+
+.pricing-section .pricing-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+   
+}
+
+.pricing-section .pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-section .pricing-card .price {
+    font-size: 2rem;
+    color: #f03e3e;
+    margin: 1rem 0;
+}
+
+.pricing-section .download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pricing-section .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pricing-section .btn.ios {
+    background-color: #007bff;
+    color: white;
+}
+
+.pricing-section .btn.android {
+    background-color: #28a745;
+    color: white;
+}
+
+.pricing-section .btn.ios:hover {
+    background-color: #0056b3;
+}
+
+.pricing-section .btn.android:hover {
+    background-color: #218838;
+}
+
+.footer {
+    background-color: #d7e1e9;
+    color: rgb(24, 23, 23);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.footer a {
+    text-decoration: underline;
+}
+
+.footer .social-links a {
+    margin: 0 1rem;
+}
+
+.content {
+    display: flex;
+    padding: 2rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.social-links img {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .pricing-section {
+        flex-direction: column; 
+        align-items: center;    
+        height: auto;          
+        padding: 2rem 1rem;     
+    }
+
+    .pricing-section .pricing-card {
+        max-width: 100%;
+        margin-top: 1rem; 
+    }
+}
